@@ -1,19 +1,16 @@
-# Gmsh Language for VS-Code
-- Kudos to Bertrand Thierry
+# Dolfinx Coloring for VS-Code
 
 ## Features
-<!---
-- Color syntaxing for GMSH `.geo` file
-- Automate indent
---->
+- GMSH Files
+- Dolfinx Python syntax
+- 
 
 ## Known issues / Future work
-<!---
-- No autocompletion
-- No "go to definition"
-- Probably missing some keywords
-- Lots of other stuff
---->
+
 ## License
 
+- Kudos to Bertrand Thierry for the initial work from [https://github.com/Bertbk/vscode-gmsh][def1]
+
 [MIT](https://opensource.org/licenses/MIT)
+
+[def1]: https://github.com/Bertbk/vscode-gmsh

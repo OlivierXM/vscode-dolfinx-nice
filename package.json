@@ -43,7 +43,7 @@
 			{
 				"label": "OliverXM Custom",
 				"uiTheme": "vs-dark",
-				"path": "./themes/atom_one_darker_high_contrast.json"
+				"path": "./themes/dolfinx-coloring.json"
 			}
 		]
 	},

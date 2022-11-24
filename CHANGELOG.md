@@ -1,13 +1,8 @@
 # Changelog
 
-## 0.1.2
+## 0.0.0
 
-Add some missing General Commands
+Initial release, pulling from [https://github.com/Bertbk/vscode-gmsh][def1]
 
-## 0.1.1
 
-Fix screenshot capture for market
-
-## 0.1.0
-
-Initial release
+[def1]: https://github.com/Bertbk/vscode-gmsh
