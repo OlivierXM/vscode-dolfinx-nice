@@ -1,0 +1,67 @@
+{
+	"author": "Olivier Montmayeur <oxm8465@g.rit.edu>",
+	"bugs": {
+		"url": "https://github.com/OlivierXM/vscode-dolfinx-nice/issues"
+	},
+	"name": "vscode-dolfinx-nice",
+	"displayName": "vscode-dolfinx-nice",
+	"description": "Personal Preference Settings in Visual Studio Code",
+	"version": "0.0.0",
+	"keywords": [
+		"gmsh",
+		"language"
+	],
+	"engines": {
+		"vscode": "^1.36.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "gmsh",
+				"aliases": [
+					"GMSH",
+					"gmsh"
+				],
+				"extensions": [
+					".geo"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "gmsh",
+				"scopeName": "source.geo",
+				"path": "./syntaxes/gmsh.tmLanguage.json"
+			}
+
+		],
+		"themes": [
+			{
+				"label": "OliverXM Custom",
+				"uiTheme": "vs-dark",
+				"path": "./themes/atom_one_darker_high_contrast.json"
+			}
+		]
+	},
+	"icon": "logos/gmsh-logo.png",
+	"homepage": "https://gmsh.info/",
+	"license": "MIT",
+	"publisher": "OlivierXM",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/OlivierXM/vscode-dolfinx-nice.git"
+	},
+	"__metadata": {
+		"publisherDisplayName": "OlivierXM",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1669242808382,
+		"preRelease": false
+	}
+}
