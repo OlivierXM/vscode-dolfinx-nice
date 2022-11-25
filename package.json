@@ -1,5 +1,5 @@
 {
-	"author": "Olivier Montmayeur <oxm8465@g.rit.edu>",
+	"author": "Olivier Montmayeur",
 	"bugs": {
 		"url": "https://github.com/OlivierXM/vscode-dolfinx-nice/issues"
 	},
@@ -28,7 +28,7 @@
 				"extensions": [
 					".geo"
 				],
-				"configuration": "./language-configuration.json"
+				"configuration": "./gmsh-language-configuration.json"
 			}
 		],
 		"grammars": [
@@ -37,7 +37,6 @@
 				"scopeName": "source.geo",
 				"path": "./syntaxes/gmsh.tmLanguage.json"
 			}
-
 		],
 		"themes": [
 			{

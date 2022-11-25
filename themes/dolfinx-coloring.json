@@ -16,6 +16,11 @@
   },
   "tokenColors": [
     {
+      "name": "Python: Custom Modules",
+      "scope": ["python.module_names"],
+      "settings": { "fontStyle": "normal", "foreground": "#FFAA00" }
+    },
+    {
       "name": "GMSH: Comments",
       "scope": ["gmsh_comment"],
       "settings": { "fontStyle": "normal", "foreground": "#8CAE73" }
@@ -526,4 +531,5 @@
       "settings": { "fontStyle": "italic", "foreground": "#DC3728" }
     }
   ]
+
 }
