@@ -2,13 +2,66 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"scopeName": "source.py",
 	"patterns": [
-		{"include": "#module_names"}
+		{"include": "#module_names"},{"include": "#keywords"},{"include": "#comments"},{"include": "#strings"}, {"include": "#operators"}
 	],
 	"repository": {
 		"module_names": {
 			"patterns": [{
-					"name": "python.module_names",
-					"match": "\\b(fem|cdfx)\\b"
+					"name": "python.module_names.standard",
+					"match": "\\b(os|sys|math|time|np|numpy|datetime|scipy)\\b"
+				},
+				{				
+					"name": "python.module_names.package",
+					"match": "\\b(fem|io|nls|mesh|cpp|log|MPI|dolfinx|mpi4py|petsc4py|pets|ufl)\\b"
+				},
+				{				
+					"name": "python.module_names.custom",
+					"match": "\\b(cdfx|Notes|CustomPlot|ViscousMats)\\b"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [{
+					"name": "python.attributes",
+					"match": "\\b((?<=\\.)[a-z,A-Z,_]{1,}(?=(\\.|\\s|\\)){1}))\\b"
+				},
+				{
+					"name": "python.functions.called",
+					"match": "(?<=\\.)[a-z,A-Z,_]{1,}(?=\\()"
+				},
+				{
+					"name": "python.functions.defined",
+					"match": "((?<=def\\s)[a-z,A-Z,_]{1,}(?=\\())"
+				},
+				{
+					"name": "python.reserved",
+					"match": "\\b(from|import|def)\\b"
+				},
+				{
+					"name": "python.keywords.class",
+					"match": "(class|super)"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [{
+					"name": "python.comments.inline",
+					"match": "(^#.{0,}$|#.{0,}$)"
+				}
+			]
+		},
+		"strings": {
+			"patterns": [{
+					"name": "python.strings.variable",
+					"match": "([\"]{1}[^\"]{1,}[\"]{1})"
+				}
+			]
+		}
+		,
+		"operators": {
+			"patterns": [{
+					"name": "python.operators.standard",
+					"match": "(=|-|\\+)"
 				}
 			]
 		}

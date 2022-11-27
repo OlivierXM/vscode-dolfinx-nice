@@ -36,6 +36,11 @@
 				"language": "gmsh",
 				"scopeName": "source.geo",
 				"path": "./syntaxes/gmsh.tmLanguage.json"
+			},
+			{
+				"language": "python",
+				"scopeName": "source.py",
+				"path": "./syntaxes/python.moduleLanguage.json"
 			}
 		],
 		"themes": [

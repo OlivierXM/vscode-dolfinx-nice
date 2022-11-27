@@ -21,6 +21,46 @@
       "settings": { "fontStyle": "normal", "foreground": "#FFAA00" }
     },
     {
+      "name": "Python: Keywords",
+      "scope": ["python.keywords"],
+      "settings": { "fontStyle": "normal", "foreground": "#D45FF6" }
+    },
+    {
+      "name": "Python: Baby Blue",
+      "scope": ["python.keywords.class"],
+      "settings": { "fontStyle": "normal", "foreground": "#00EEFF" }
+    },   
+    {
+      "name": "Python: Operators",
+      "scope": ["python.operators"],
+      "settings": { "fontStyle": "normal", "foreground": "#D45FF6" }
+    },
+    {
+      "name": "Python: Attributes",
+      "scope": ["python.attributes"],
+      "settings": { "fontStyle": "normal", "foreground": "#FF0000" }
+    },
+    {
+      "name": "Python: Comments",
+      "scope": ["python.comments"],
+      "settings": { "fontStyle": "normal", "foreground": "#8CAE73" }
+    },
+    {
+      "name": "Python: Strings",
+      "scope": ["python.strings"],
+      "settings": { "fontStyle": "normal", "foreground": "#17D53D" }
+    },
+    {
+      "name": "Python: Reserved Keywords",
+      "scope": ["python.reserved"],
+      "settings": { "fontStyle": "normal", "foreground": "#B849FC" }
+    },
+    {
+      "name": "Python: Functions",
+      "scope": ["python.functions"],
+      "settings": { "fontStyle": "normal", "foreground": "#51B1FF" }
+    },
+    {
       "name": "GMSH: Comments",
       "scope": ["gmsh_comment"],
       "settings": { "fontStyle": "normal", "foreground": "#8CAE73" }
