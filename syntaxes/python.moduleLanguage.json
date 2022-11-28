@@ -2,13 +2,13 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"scopeName": "source.py",
 	"patterns": [
-		{"include": "#module_names"},{"include": "#keywords"},{"include": "#comments"},{"include": "#strings"}, {"include": "#operators"}
+		{"include": "#module_names"},{"include": "#keywords"},{"include": "#comments"},{"include": "#strings"}, {"include": "#operators"},{"include": "#numbers"}
 	],
 	"repository": {
 		"module_names": {
 			"patterns": [{
 					"name": "python.module_names.standard",
-					"match": "\\b(os|sys|math|time|np|numpy|datetime|scipy)\\b"
+					"match": "\\b(os|sys|math|time|np|numpy|datetime|scipy|scio)\\b"
 				},
 				{				
 					"name": "python.module_names.package",
@@ -23,7 +23,7 @@
 		"keywords": {
 			"patterns": [{
 					"name": "python.attributes",
-					"match": "\\b((?<=\\.)[a-z,A-Z,_]{1,}(?=(\\.|\\s|\\)){1}))\\b"
+					"match": "\\b((?<=\\.)[a-z,A-Z,_]{1,}[0-9]{0,}(?=(\\.|\\s|\\)|\\[){1}))\\b"
 				},
 				{
 					"name": "python.functions.called",
@@ -35,11 +35,16 @@
 				},
 				{
 					"name": "python.reserved",
-					"match": "\\b(from|import|def)\\b"
+					"match": "\\b(from|import|def|if(?=[\\s]{0,}\\()|((?<=\\))[:]{1}$)|return|\\sin\\s)\\b"
 				},
 				{
 					"name": "python.keywords.class",
-					"match": "(class|super)"
+					"match": "\\b(^class|super)\\b"
+				}
+				,
+				{
+					"name": "python.keywords.special",
+					"match": "\\b(True|False|None)\\b"
 				}
 			]
 		},
@@ -56,12 +61,22 @@
 					"match": "([\"]{1}[^\"]{1,}[\"]{1})"
 				}
 			]
-		}
-		,
+		},
 		"operators": {
 			"patterns": [{
 					"name": "python.operators.standard",
-					"match": "(=|-|\\+)"
+					"match": "(=|-|\\+|\\*|\\>|\\<)"
+				},
+				{
+					"name": "python.operators.power",
+					"match": "\\b((?<=[0-9]{1,})e(?=[-\\+]{0,1}[0-9]{1,}))\\b"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [{
+					"name": "python.numbers",
+					"match": "((?<![^0-9/\\s-]{1})[0-9]{1,}[\\.]{0,1}[0-9]{0,})"
 				}
 			]
 		}

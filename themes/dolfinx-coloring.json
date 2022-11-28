@@ -21,6 +21,11 @@
       "settings": { "fontStyle": "normal", "foreground": "#FFAA00" }
     },
     {
+      "name": "Python: Numbers",
+      "scope": ["python.numbers"],
+      "settings": { "fontStyle": "normal", "foreground": "#B6932D" }
+    },
+    {
       "name": "Python: Keywords",
       "scope": ["python.keywords"],
       "settings": { "fontStyle": "normal", "foreground": "#D45FF6" }
@@ -29,7 +34,12 @@
       "name": "Python: Baby Blue",
       "scope": ["python.keywords.class"],
       "settings": { "fontStyle": "normal", "foreground": "#00EEFF" }
-    },   
+    },
+    {
+      "name": "Python: Beige",
+      "scope": ["python.keywords.special"],
+      "settings": { "fontStyle": "normal", "foreground": "#F3D79E" }
+    },    
     {
       "name": "Python: Operators",
       "scope": ["python.operators"],
