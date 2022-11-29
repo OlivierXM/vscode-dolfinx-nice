@@ -16,6 +16,11 @@
   },
   "tokenColors": [
     {
+      "name": "Python: Comments",
+      "scope": ["python.comments"],
+      "settings": { "fontStyle": "normal", "foreground": "#8CAE73" }
+    },
+    {
       "name": "Python: Custom Modules",
       "scope": ["python.module_names"],
       "settings": { "fontStyle": "normal", "foreground": "#FFAA00" }
@@ -30,6 +35,11 @@
       "scope": ["python.keywords"],
       "settings": { "fontStyle": "normal", "foreground": "#D45FF6" }
     },
+    {
+      "name": "Python: Keywords Args",
+      "scope": ["python.keywords.args"],
+      "settings": { "fontStyle": "normal", "foreground": "#F1FF00" }
+    },   
     {
       "name": "Python: Baby Blue",
       "scope": ["python.keywords.class"],
@@ -49,11 +59,6 @@
       "name": "Python: Attributes",
       "scope": ["python.attributes"],
       "settings": { "fontStyle": "normal", "foreground": "#FF0000" }
-    },
-    {
-      "name": "Python: Comments",
-      "scope": ["python.comments"],
-      "settings": { "fontStyle": "normal", "foreground": "#8CAE73" }
     },
     {
       "name": "Python: Strings",
