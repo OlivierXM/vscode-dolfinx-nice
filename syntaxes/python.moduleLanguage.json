@@ -42,6 +42,10 @@
 					"match": "\\b(while|and|from|import|def|if(?=[\\s]{0,}\\()|((?<=\\))[:]{1}$)|return|\\sin\\s)\\b"
 				},
 				{
+					"name": "python.reserved.logic",
+					"match": "\\b(\\snot(?=\\())\\b"
+				},
+				{
 					"name": "python.reserved.others",
 					"match": "\\b((?<=\\s)as(?=\\s)|^with\\s)\\b"
 				},				
@@ -55,8 +59,12 @@
 				},		
 				{
 					"name": "python.keywords.args",
-					"match": "\\b((?<=(,[\\s]{1,}))[a-z]{1,}(?=([\\s]{0,}=)))\\b"
-				}
+					"match": "\\b((?<=(,[\\s]{0,}))[a-z]{1,}(?=([\\s]{0,}[\\=]{1}[^=])))\\b"
+				},
+				{
+					"name": "python.keywords.args.firstArg",
+					"match": "\\b((?<=(\\([\\s]{0,}))[a-z]{1,}(?=([\\s]{0,}[\\=]{1}[^=])))\\b"
+				}				
 			]
 		},
 		"comments": {
