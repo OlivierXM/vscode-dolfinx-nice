@@ -16,14 +16,14 @@
 				},
 				{				
 					"name": "python.module_names.custom",
-					"match": "\\b(cdfx|Notes|CustomPlot|ViscousMats)\\b"
+					"match": "\\b(cdfx|Notes|CustomPlot|ViscousMats|TestParameters(?!\\())\\b"
 				}
 			]
 		},
 		"keywords": {
 			"patterns": [{
 					"name": "python.attributes",
-					"match": "\\b((?<=\\.)[a-z,A-Z,_]{1,}(?=(\\.|\\s|\\)|\\[|,|\\]){1}))\\b"
+					"match": "\\b((?<=\\.)[a-z,A-Z,_]{1,}[0-9]{0,}(?=(\\.|\\s|\\)|\\[|,|\\]){1}))\\b"
 				},
 				{
 					"name": "python.functions.called",
@@ -38,12 +38,16 @@
 					"match": "\\b((range(?=\\())|open(?=\\())\\b"
 				},
 				{
+					"name": "python.functions.special",
+					"match": "\\b(quit(?=\\(\\))|print(?=\\()|Exception(?=\\()|str(?=\\())\\b"
+				},
+				{
 					"name": "python.reserved",
-					"match": "\\b(while|and|from|import|def|if(?=[\\s]{0,}\\()|((?<=\\))[:]{1}$)|return|\\sin\\s)\\b"
+					"match": "\\b(raise\\s|while|and|from|import|def|if(?=[\\s]{0,}\\()|((?<=\\))[:]{1}$)|return|\\sin\\s)\\b"
 				},
 				{
 					"name": "python.reserved.logic",
-					"match": "\\b(\\snot(?=\\())\\b"
+					"match": "\\b((?<=(\\s|\\())not(?=(\\()|\\s))\\b"
 				},
 				{
 					"name": "python.reserved.others",
@@ -51,7 +55,7 @@
 				},				
 				{
 					"name": "python.keywords.class",
-					"match": "\\b(^class|super)\\b"
+					"match": "\\b(^class|super|(?<=\\*\\*)kwargs)\\b"
 				},
 				{
 					"name": "python.keywords.special",
@@ -59,7 +63,7 @@
 				},		
 				{
 					"name": "python.keywords.args",
-					"match": "\\b((?<=(,[\\s]{0,}))[a-z]{1,}(?=([\\s]{0,}[\\=]{1}[^=])))\\b"
+					"match": "\\b((?<=(,[\\s]{0,}))[a-zA-Z]{1,}(?=([\\s]{0,}[\\=]{1}[^=])))\\b"
 				},
 				{
 					"name": "python.keywords.args.firstArg",
@@ -111,7 +115,7 @@
 				},
 				{
 					"name": "python.numbers.bracketed",
-					"match": "\\b((?<=\\[)[\\s]{0,}[0-9\\.]{1,}(?=([\\s]{0,}\\])))\\b"
+					"match": "\\b((?<=\\[)[\\s]{0,}[0-9]{1,}[\\.]{0,1}[0-9]{0,}(?=([\\s]{0,}\\])))\\b"
 				}
 			]
 		}

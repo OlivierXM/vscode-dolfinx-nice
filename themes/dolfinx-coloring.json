@@ -76,6 +76,11 @@
       "settings": { "fontStyle": "normal", "foreground": "#51B1FF" }
     },
     {
+      "name": "Python: Functions.Special",
+      "scope": ["python.functions.special"],
+      "settings": { "fontStyle": "normal", "foreground": "#FF00D9" }
+    },
+    {
       "name": "GMSH: Comments",
       "scope": ["gmsh_comment"],
       "settings": { "fontStyle": "normal", "foreground": "#8CAE73" }
