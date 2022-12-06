@@ -26,8 +26,12 @@
 					"match": "\\b((?<=\\.)[a-z,A-Z,_]{1,}[0-9]{0,}(?=(\\.|\\s|\\)|\\[|,|\\]){1}))\\b"
 				},
 				{
-					"name": "python.functions.called",
+					"name": "python.functions.called_attribute",
 					"match": "(?<=\\.)[a-z,A-Z,_]{1,}(?=\\()"
+				},
+				{
+					"name": "python.functions.called_mono",
+					"match": "(?<=[\\s]{1,})[a-z,A-Z,_]{1}[a-z,A-Z,_0-9]{0,}(?=\\()"
 				},
 				{
 					"name": "python.functions.defined",
@@ -50,6 +54,10 @@
 					"match": "\\b((?<=(\\s|\\())not(?=(\\()|\\s))\\b"
 				},
 				{
+					"name": "python.reserved.for",
+					"match": "\\b([\\t]{0,}for(?=[\\s]{1,}[0-9a-z]{1,}))\\b"
+				},				
+				{
 					"name": "python.reserved.others",
 					"match": "\\b((?<=\\s)as(?=\\s)|^with\\s)\\b"
 				},				
@@ -63,11 +71,11 @@
 				},		
 				{
 					"name": "python.keywords.args",
-					"match": "\\b((?<=(,[\\s]{0,}))[a-zA-Z]{1,}(?=([\\s]{0,}[\\=]{1}[^=])))\\b"
+					"match": "\\b((?<=(,[\\s]{0,}))[a-z_A-Z]{1,}(?=([\\s]{0,}[\\=]{1}[^=])))\\b"
 				},
 				{
 					"name": "python.keywords.args.firstArg",
-					"match": "\\b((?<=(\\([\\s]{0,}))[a-z]{1,}(?=([\\s]{0,}[\\=]{1}[^=])))\\b"
+					"match": "\\b((?<=(\\([\\s]{0,}))[a-z_]{1,}(?=([\\s]{0,}[\\=]{1}[^=])))\\b"
 				}				
 			]
 		},
@@ -78,7 +86,7 @@
 				},
 				{
 					"name": "python.comments.block",
-					"watch": "\\b(^\"\"\"\n[.\n]{0,}\"\"\"\n$)\\b"
+					"match": "\"\"\"\n"
 				}
 			]
 		},
