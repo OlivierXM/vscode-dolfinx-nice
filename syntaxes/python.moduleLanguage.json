@@ -31,7 +31,7 @@
 				},
 				{
 					"name": "python.functions.called_mono",
-					"match": "(?<=[\\s]{1,})[a-z,A-Z,_]{1}[a-z,A-Z,_0-9]{0,}(?=\\()"
+					"match": "(?<!class\\s)(?<=[\\s]{1,})[a-z,A-Z,_]{1}[a-z,A-Z,_0-9]{0,}(?=\\(.{0,}\\))"
 				},
 				{
 					"name": "python.functions.defined",
@@ -64,6 +64,10 @@
 				{
 					"name": "python.keywords.class",
 					"match": "\\b(^class|super|(?<=\\*\\*)kwargs)\\b"
+				},		
+				{
+					"name": "python.keywords.class.called",
+					"match": "\\b([a-zA-Z]{1,}(?=\\(\\)))\\b"
 				},
 				{
 					"name": "python.keywords.special",
@@ -101,7 +105,7 @@
 				},
 				{
 					"name": "python.strings.singles",
-					"match": "([']{1}[^\"]{1,}[']{1})"
+					"match": "([']{1}[^\":]{1,}[']{1})"
 				}
 			]
 		},
