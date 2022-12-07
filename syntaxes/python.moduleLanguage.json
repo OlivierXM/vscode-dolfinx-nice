@@ -67,7 +67,7 @@
 				},		
 				{
 					"name": "python.keywords.class.called",
-					"match": "\\b([a-zA-Z]{1,}(?=\\(\\)))\\b"
+					"match": "\\b((?<!class\\s)[a-zA-Z]{1,}(?=\\(\\)))\\b"
 				},
 				{
 					"name": "python.keywords.special",
