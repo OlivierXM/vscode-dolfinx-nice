@@ -47,7 +47,7 @@
 				},
 				{
 					"name": "python.reserved",
-					"match": "\\b(raise\\s|while|and|from|import|def|if(?=[\\s]{0,}\\()|((?<=\\))[:]{1}$)|return|\\sin\\s)\\b"
+					"match": "\\b(raise\\s|while|and|from|import|def|[\\t]{0,}if\\s[\\(]{0,1}|((?<=\\))[:]{1}$)|return|\\sin\\s|continue)\\b"
 				},
 				{
 					"name": "python.reserved.logic",
