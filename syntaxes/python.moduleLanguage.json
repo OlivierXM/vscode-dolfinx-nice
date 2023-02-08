@@ -8,7 +8,7 @@
 		"module_names": {
 			"patterns": [{
 					"name": "python.module_names.standard",
-					"match": "\\b(os|sys|math|time|np|numpy|datetime|scipy|scio)\\b"
+					"match": "\\b(os|sys|math|time|np|numpy|datetime|scipy|scio|glob)\\b"
 				},
 				{				
 					"name": "python.module_names.package",
@@ -48,6 +48,10 @@
 				{
 					"name": "python.reserved",
 					"match": "\\b(raise\\s|while|and|from|import|def|[\\t]{0,}if\\s[\\(]{0,1}|((?<=\\))[:]{1}$)|return|\\sin\\s|continue)\\b"
+				},
+				{
+					"name": "python.reserved.else",
+					"match": "\\b([\\t]{0,}else[\\s]{0,}[\\(]{0,})\\b"
 				},
 				{
 					"name": "python.reserved.logic",
