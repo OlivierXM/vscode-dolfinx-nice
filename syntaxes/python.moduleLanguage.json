@@ -31,7 +31,7 @@
 				},
 				{
 					"name": "python.functions.called_mono",
-					"match": "(?<!class\\s)(?<=[\\s]{1,})[a-z,A-Z,_]{1}[a-z,A-Z,_0-9]{0,}(?=\\(.{0,}\\))"
+					"match": "(?<!class\\s)(?<=[\\s|\\(]{1,})[a-z,A-Z,_]{1}[a-z,A-Z,_0-9]{0,}(?=\\(.{0,}\\))"
 				},
 				{
 					"name": "python.functions.defined",
@@ -43,7 +43,7 @@
 				},
 				{
 					"name": "python.functions.special",
-					"match": "\\b(quit(?=\\(\\))|print(?=\\()|Exception(?=\\()|str(?=\\())\\b"
+					"match": "\\b(quit(?=\\(\\))|print(?=\\()|abs(?=\\()|Exception(?=\\()|str(?=\\())\\b"
 				},
 				{
 					"name": "python.reserved",
